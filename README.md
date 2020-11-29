@@ -29,7 +29,13 @@ https://app.diagrams.net/#G1v9__jPF-lJMyqXm_xyc6PyCbaX6Jng0h
 
 #### PostMVP  
 
-- 
+- Add A Voteing system to posts
+
+## Dependencies
+
+- React
+- Rails
+- Flexbox
 
 ## Timeframes
 
