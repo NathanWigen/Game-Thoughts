@@ -8,6 +8,14 @@ https://nathanwigen.github.io/Weather-Today/
 
 The website will allow you to review video games that you have played. You can leave comments on other peoples reviews to start a conversation about what you played.
 
+## Goals
+
+Make a review website that uses a one to many relationship between post and comments.
+
+## Challenges
+
+The challenges I forsee my having stuggles with is getting my Rails server up and running and connected to my React front end.
+
 ## Wireframes
 
 https://app.diagrams.net/#G1nq4nivkW2_-jh0qegTfVJszaV-My8Mxt
