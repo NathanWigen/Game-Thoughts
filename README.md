@@ -48,8 +48,6 @@ The challenges I forsee my having stuggles with is getting my Rails server up an
 
 ### Libraries and Dependencies
 
-> Use this section to list all supporting libraries and dependencies, and their role in the project. Below is an example - this needs to be replaced!
-
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
 |      React       | React is Going to be running my front end  |
@@ -68,19 +66,25 @@ https://app.diagrams.net/#G1nq4nivkW2_-jh0qegTfVJszaV-My8Mxt
 
 #### Component Hierarchy
 
-> Use this section to define your React components and the data architecture of your app. This should be a reflection of how you expect your directory/file tree to look like. 
-
 ``` structure
 
 src
-|__ assets/
-      |__ fonts
-      |__ graphics
-      |__ images
-      |__ mockups
 |__ components/
       |__ Header.jsx
-|__ services/
+      |__ Footer.jsx
+      |__ Layout.jsx
+|__ Container
+      |__ MainContainer.jsx
+|__ Screens
+      |__ Login.jsx
+      |__ Register.jsx
+      |__ BlogCreate.jsx
+      |__ BlogEdit.jsx
+|__ services
+      |__ apiConfig
+      |__ auth.js
+      |__ blogs.js
+      |__ comments.js
 
 ```
 
