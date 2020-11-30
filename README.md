@@ -54,6 +54,7 @@ The challenges I forsee my having stuggles with is getting my Rails server up an
 |   React Router   | React Router is going to allow my front end  |
 |   Ruby on Rails  |_Lorem ipsum dolor sit amet, consectetur._ |
 |  React-Router-dom | I am going to use Switch, Route, useHistory |
+|  Axios | I am going to use to make api calls|
 
 
 <br>
