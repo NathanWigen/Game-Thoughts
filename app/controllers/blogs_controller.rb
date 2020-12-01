@@ -11,9 +11,10 @@ class BlogsController < ApplicationController
     render json: @blogs
   end
 
+
   # GET
   def show
-    render json: @blog
+    render json: @blog, include: :comments
   end
 
   # POST 
