@@ -3,12 +3,12 @@ import { Switch, Route, useHistory } from 'react-router-dom';
 
 import './App.css';
 import Layout from './layouts/Layout';
-import BlogCreate from './screens/BlogCreate';
-import BlogEdit from './screens/BlogEdit';
-import Blogs from './screens/Blogs';
-import Login from './screens/Login';
-import Register from './screens/Register'
-import BlogShow from './screens/BlogShow'
+import BlogCreate from './screens/BlogCreate/BlogCreate';
+import BlogEdit from './screens/BlogEdit/BlogEdit';
+import Blogs from './screens/Blogs/Blogs';
+import Login from './screens/Login/Login';
+import Register from './screens/Register/Register'
+import BlogShow from './screens/BlogShow/BlogShow'
 import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
 import {postBlog, getAllBlogs, destroyBlog, putBlog} from './services/blogs'
 
@@ -24,7 +24,6 @@ function App() {
   useEffect(() => {
     const getBlogs = async () => {
       const blogData = await getAllBlogs()
-      console.log(blogData);
       setBlogs(blogData)
     }
     getBlogs()
@@ -50,7 +49,7 @@ function App() {
   const handleRegister = async (registerData) => {
     const userData = await registerUser(registerData);
     setCurrentUser(userData);
-    history.push('/');
+    history.push('/blogs');
   }
 
   const handleLogout = () => {

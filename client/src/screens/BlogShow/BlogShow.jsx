@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { getOneBlog } from '../services/blogs'
-import { postComment } from '../services/comments'
-import CommentCreate from './CommentCreate'
+import { getOneBlog } from '../../services/blogs'
+import { postComment } from '../../services/comments'
+import CommentCreate from '../CommentCreate/CommentCreate'
 
 export default function BlogShow() {
   const [blog, setBlog] = useState({})
@@ -17,7 +17,7 @@ export default function BlogShow() {
       setComments(blogData.comments)
     }
     getBlog()
-  },[comments])
+  },[])
 
   const handleCreate = async (id, commentData) => {
     const newComment = await postComment(Number(id), commentData)
@@ -27,7 +27,7 @@ export default function BlogShow() {
   return (
     <div>
       {
-        blog && <h3>{blog.id}</h3>
+        blog && <div><h3>{blog.title}</h3> <h3>{blog.content}</h3> </div> 
       }
       <div>
         {comments &&

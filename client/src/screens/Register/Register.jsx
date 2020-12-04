@@ -1,7 +1,7 @@
 // Code from Tastevile code along 
 
 import React, { useState } from 'react';
-
+import './Register.css'
 
 
 export default function Register(props) {
@@ -23,36 +23,44 @@ export default function Register(props) {
     <form onSubmit={(e) => {
       e.preventDefault();
       props.handleRegister(formData);
-    }}>
-      <h3>Register</h3>
-      <label>Username:
+    }} className="register-form">
+      <h3 className="register-title">Register</h3>
+      <div className="register-user-input-parent">
+      <label className="register-name">Username:
         <input
           type='text'
           name='username'
           value={formData.username}
           onChange={handleChange}
+          className="register-username-input"
         />
       </label>
-      <br />
-      <label>Email:
+      </div>
+      <div className="register-user-email-parent">
+      <label className="register-email">Email:
         <input
           type='text'
           name='email'
           value={formData.email}
           onChange={handleChange}
+          className="register-email-input"  
         />
-      </label>
-      <br />
-      <label>Password:
+        </label>
+      </div>
+      <div className="register-user-password-parent">
+      <label className="register-password">Password:
         <input
           type='password'
           name='password'
           value={formData.password}
           onChange={handleChange}
+          className="register-password-input"
         />
-      </label>
-      <br />
-      <button>Submit</button>
+        </label>
+      </div>
+      <div className="register-button-parent">
+      <button className="register-submit">Submit</button>
+      </div>
     </form>
   )
 }
