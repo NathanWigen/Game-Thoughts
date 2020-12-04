@@ -1,19 +1,19 @@
 # This code is from the Rails review with Shay
 
 class BlogsController < ApplicationController
-  before_action :set_blog, only: [:show, :update, :destroy]
+  # before_action :set_blog, only: [:index, :show]
+  before_action :authorize_request, only: [:create, :update, :destroy]
 
   # GET
   def index
-    @user = User.find(params[:user_id])
-    @blogs = @user.blogs
-
+    @blogs = Blog.all
     render json: @blogs
   end
 
 
   # GET
   def show
+    @blog = Blog.find(params[:id])
     render json: @blog, include: :comments
   end
 
@@ -28,13 +28,13 @@ class BlogsController < ApplicationController
   end
 
   # PATCH/PUT
-  def update
-    if @blog.update(blog_params)
-      render json: @blog
-    else
-      render json: @blog.errors, status: :unprocessable_entity
-    end
-  end
+  # def update
+  #   if @blog.update(blog_params)
+  #     render json: @blog
+  #   else
+  #     render json: @blog.errors, status: :unprocessable_entity
+  #   end
+  # end
 
   # DELETE 
   def destroy
@@ -45,19 +45,16 @@ class BlogsController < ApplicationController
     @blog = Blog.all.sample
     render json: @blog
   end
-  def find_all_blogs 
-    @blogs = Blog.all
-    render json: @blogs
-  end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_blog
-      @blog = Blog.find(params[:id])
-    end
+    # def set_blog
+      # @blog = Blog.find(params[:id])
+    # end
 
     # Only allow a trusted parameter "white list" through.
     def blog_params
-      params.require(:blog).permit(:title, :content, :author, :user_id)
+      params.require(:blog).permit(:title, :content).merge(user_id: @current_user.id)
     end
 end
