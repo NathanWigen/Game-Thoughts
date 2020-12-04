@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+.register-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.register-title{
+  font-family: 'Audiowide', cursive;
+}
+
+.register-user-input-parent{
+  margin-bottom: 10px;
+}
+
+.register-name{
+  font-family: 'Audiowide', cursive;
+}
+
+.register-username-input{
+  border: 1px solid black;
+  box-shadow: 2px 3px black;
+  margin-left: 5px;
+}
+
+.register-user-email-parent{
+  margin-bottom: 10px;
+}
+
+.register-email{
+  font-family: 'Audiowide', cursive;
+}
+
+.register-email-input{
+  border: 1px solid black;
+  box-shadow: 2px 3px black;
+  margin-left: 5px;
+}
+
+.register-user-password-parent{
+  margin-bottom: 10px;
+}
+
+.register-password{
+  font-family: 'Audiowide', cursive;
+}
+
+.register-password-input{
+  border: 1px solid black;
+  box-shadow: 2px 3px black;
+  margin-left: 5px;
+}
+
+.register-button-parent{
+  display: flex;
+  justify-content: center;
+}
+
+.register-submit{
+  width: 150px;
+  border: none;
+  color: white;
+  background-color: #7d7878;
+  box-shadow: 5px 5px #5c4d4d;
+}
