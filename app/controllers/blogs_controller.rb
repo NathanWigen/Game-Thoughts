@@ -2,24 +2,25 @@
 
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :update, :destroy]
+  before_action :authorize_request, only: [:create, :update, :destroy]
 
   # GET
   def index
-    @user = User.find(params[:user_id])
-    @blogs = @user.blogs
-
+    @blogs = Blog.all
     render json: @blogs
   end
 
 
   # GET
   def show
+    @blog = Blog.find(params[:id])
     render json: @blog, include: :comments
   end
 
   # POST 
   def create
     @blog = Blog.new(blog_params)
+    @blog.user = @current_user
     if @blog.save
       render json: @blog, status: :created
     else
@@ -45,10 +46,7 @@ class BlogsController < ApplicationController
     @blog = Blog.all.sample
     render json: @blog
   end
-  def find_all_blogs 
-    @blogs = Blog.all
-    render json: @blogs
-  end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -58,6 +56,6 @@ class BlogsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def blog_params
-      params.require(:blog).permit(:title, :content, :author, :user_id)
+      params.require(:blog).permit(:title, :content)
     end
 end
