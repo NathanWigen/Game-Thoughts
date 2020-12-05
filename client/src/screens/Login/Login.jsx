@@ -22,28 +22,30 @@ export default function Login(props) {
       props.handleLogin(formData);
     }}>
       <h3 className="login-title">Login</h3>
-      <div>
-      <label>Username:
+      <div className="login-user-input-parent">
+      <label className="login-name">Username:
         <input
           type='text'
           name='username'
           value={formData.username}
           onChange={handleChange}
+          className="login-username-input"
         />
       </label>
       </div>
-      <div>
-      <label>Password:
+      <div className="login-user-email-parent">
+      <label className="login-email">Password:
         <input
           type='password'
           name='password'
           value={formData.password}
           onChange={handleChange}
+          className="login-username-input"
         />
         </label>
       </div>
-      <Link to='/register'>Register</Link>
-      <button>Submit</button>
+      <Link to='/register' className="register-link">Register</Link>
+      <button className="login-submit">Submit</button>
     </form>
   )
 }

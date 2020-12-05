@@ -1,5 +1,60 @@
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 
+.login-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .login-title{
   font-family: 'Audiowide', cursive;
+}
+
+.login-user-input-parent{
+  margin-bottom: 10px;
+}
+
+.login-name{
+  font-family: 'Audiowide', cursive;
+}
+
+.login-username-input{
+  border: 1px solid black;
+  box-shadow: 2px 3px black;
+  margin-left: 5px;
+}
+
+.login-user-email-parent{
+  margin-bottom: 10px;
+}
+
+.login-email{
+  font-family: 'Audiowide', cursive;
+}
+
+.login-email-input{
+  border: 1px solid black;
+  box-shadow: 2px 3px black;
+  margin-left: 5px;
+}
+
+.login-user-password-parent{
+  margin-bottom: 10px;
+}
+
+.login-password{
+  font-family: 'Audiowide', cursive;
+}
+
+.register-link{
+  text-decoration: none;
+  padding-right: 15px;
+}
+
+.login-submit{
+  width: 150px;
+  border: none;
+  color: white;
+  background-color: #7d7878;
+  box-shadow: 5px 5px #5c4d4d;
 }
