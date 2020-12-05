@@ -3,24 +3,34 @@
 
 .header-title{
   font-family:'Press Start 2P', cursive;
+  color: white;
 }
 
 .user-name{
   font-family: 'Orbitron', sans-serif;
+  color: white;
 }
 
 .header-logout{
+  font-family: 'Orbitron', sans-serif;
   border: none;
   width: 100px;
   background-color: white;
+  color: black;
+  margin-bottom: 1px;
 }
 
 .header-login{
+  font-family: 'Orbitron', sans-serif;
   text-decoration: none;
+  max-width: 115px;
+  color: black;
 }
 
 .header-post{
+  font-family: 'Orbitron', sans-serif;
   border: none;
-  width: 100px;
+  max-width: 110px;
   background-color: white;
+  box-shadow: 5px 5px #5c4d4d;
 }

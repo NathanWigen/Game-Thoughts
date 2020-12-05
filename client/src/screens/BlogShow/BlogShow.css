@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap');
+
+.blog-title{
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+}
+
+.blog-content{
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+}
+
+.add-comment{
+  width: 130px;
+  border: 1px solid black;
+  color: white;
+  background-color: #7d7878;
+  box-shadow: 5px 5px #5c4d4d;
+}

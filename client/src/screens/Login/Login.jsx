@@ -17,6 +17,7 @@ export default function Login(props) {
   }
 
   return (
+    <div>
     <form onSubmit={(e) => {
       e.preventDefault();
       props.handleLogin(formData);
@@ -46,6 +47,7 @@ export default function Login(props) {
       </div>
       <Link to='/register' className="register-link">Register</Link>
       <button className="login-submit">Submit</button>
-    </form>
+      </form>
+    </div>
   )
 }

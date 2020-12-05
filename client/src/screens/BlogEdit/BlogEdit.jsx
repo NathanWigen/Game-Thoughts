@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
+import './BlogEdit.css'
 
 
 export default function BlogEdit(props) {
@@ -10,7 +11,7 @@ export default function BlogEdit(props) {
   const { id } = useParams();
 
   useEffect(() => {
-    const prefillForm = () => {
+    const preFillForm = () => {
       const blogsOne = props.blogs.find(blog => blog.id === Number(id))
       setFormData({
         title: blogsOne.title,
@@ -18,7 +19,7 @@ export default function BlogEdit(props) {
       })
     }
     if (props.blogs.length) {
-      prefillForm()
+      preFillForm()
     }
   },[props.blogs])
 
@@ -35,29 +36,31 @@ export default function BlogEdit(props) {
       e.preventDefault();
       props.handleUpdate(id, formData);
     }}>
-    <div>
-      <h3>Edit Blog</h3>
-      <label>Game Title:
+    <div className="game-title-parent">
+      <h3 className="edit-blog-title">Edit Blog</h3>
+      <label className="game-title">Game Title:
         <input
           type='text'
           name='title'
           value={formData.title}
           onChange={handleChange}
+          className="game-title-input"
         />
         </label>
       </div>
-      <div>
-      <label>Review:
-        <input
+      <div className="game-review-parent">
+      <label className="game-review">Review:
+        <textarea
           type='text'
           name='content'
           value={formData.content}
           onChange={handleChange}
+          className="game-review-input"  
         />
         </label>
       </div>
         <div>
-          <button>Submit</button>
+          <button className="blog-create-submit">Submit</button>
         </div>  
     </form>
     )

@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 
+
+
 .login-form{
   display: flex;
   flex-direction: column;
@@ -49,6 +51,7 @@
 .register-link{
   text-decoration: none;
   padding-right: 15px;
+  color: black;
 }
 
 .login-submit{

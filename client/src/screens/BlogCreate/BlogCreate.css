@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+.game-title-parent{
+  margin-bottom: 10px;
+}
+
+.create-blog-header{
+  font-family: 'Audiowide', cursive; 
+  color: white; 
+}
+
+.game-title{
+  font-family: 'Audiowide', cursive;  
+  color: white;
+}
+
+.game-title-input{
+  border: 1px solid black;
+  box-shadow: 2px 3px black;
+  margin-left: 5px;
+}
+
+.game-review-parent{
+  margin-bottom: 10px;
+}
+
+.game-review{
+  font-family: 'Audiowide', cursive;
+  color: white;
+}
+
+.game-review-input{
+  border: 1px solid black;
+  box-shadow: 2px 3px black;
+  margin-left: 5px;
+}
+
+.blog-create-submit{
+  width: 130px;
+  border: 1px solid black;
+  color: white;
+  background-color: #7d7878;
+  box-shadow: 5px 5px #5c4d4d;
+}

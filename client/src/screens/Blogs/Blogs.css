@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap');
+
+.center{
+  margin: auto;
+  width: 27%;
+  padding: 10px;
+}
+
+.blogs-title{
+  font-family: 'Orbitron', sans-serif;
+}
+
+.blogs-container{
+  border: thick double #32a1ce;
+  margin-bottom: 20px;
+  width: 350px;
+}
+
+.blog-edit{
+  width: 130px;
+  border: 1px solid black;
+  color: white;
+  background-color: #7d7878;
+  box-shadow: 5px 5px #5c4d4d;
+}
+
+.blog-delete{
+  width: 130px;
+  border: 1px solid black;
+  color: white;
+  background-color: #7d7878;
+  box-shadow: 5px 5px #5c4d4d;
+}
+
+.blog-title{
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+}
+
+.blog-content{
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+}
+
+.view-comments-link{
+  margin-bottom: 5px;
+}
+
+.view-comments{
+  text-decoration: none;
+  width: 130px;
+  border: 1px solid black;
+  color: white;
+  background-color: #7d7878;
+}
