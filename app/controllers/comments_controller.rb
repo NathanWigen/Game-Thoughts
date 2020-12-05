@@ -7,7 +7,7 @@ class CommentsController < ApplicationController
   
     # GET
     def index
-      @blog = Blog.find(params[:comment_id])
+      @blog = Blog.find(params[:blog_id])
       @comments = @blog.comments
   
       render json: @comments
