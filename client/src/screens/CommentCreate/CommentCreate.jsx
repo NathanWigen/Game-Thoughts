@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import './CommentCreate.css'
 
 
 export default function CommentCreate(props) {
@@ -22,29 +23,31 @@ export default function CommentCreate(props) {
       e.preventDefault();
       props.handleCreate(props.id, formData);
     }}>
-    <div>
-      <h3>New Comment</h3>
-      <label>Review Title:
+    <div className="comment-title-parent">
+      <h3 className="create-comment-title">New Comment</h3>
+      <label className="review-title">Review Title:
         <input
           type='text'
           name='title'
           value={formData.title}
           onChange={handleChange}
+          className="comment-review-title-input"  
         />
         </label>
       </div>
-      <div>
-      <label>Review:
+      <div className="comment-review-parent">
+      <label className="create-comment-review">Review:
         <input
           type='text'
           name='content'
           value={formData.content}
           onChange={handleChange}
+          className="comment-review-input"
         />
         </label>
       </div>
         <div>
-        <button>Submit</button>
+        <button className="comment-create-submit">Submit</button>
         </div>  
     </form>
     )

@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import { getOneBlog } from '../../services/blogs'
 import { postComment } from '../../services/comments'
 import CommentCreate from '../CommentCreate/CommentCreate'
+import './BlogShow.css'
 
 export default function BlogShow() {
   const [blog, setBlog] = useState({})
@@ -27,7 +28,11 @@ export default function BlogShow() {
   return (
     <div>
       {
-        blog && <div><h3>{blog.title}</h3> <h3>{blog.content}</h3> </div> 
+        blog &&
+        <div>
+          <h3 className="blog-title">{blog.title}</h3>
+          <h3 className="blog-content">{blog.content}</h3>
+        </div> 
       }
       <div>
         {comments &&
@@ -45,7 +50,7 @@ export default function BlogShow() {
             setCommentToggle(false) :
           setCommentToggle(true)
 
-        }}>Add Comment</button>
+        }} className="add-comment">Add Comment</button>
         {
           commentToggle && 
           <CommentCreate handleCreate={handleCreate} id={id}/>

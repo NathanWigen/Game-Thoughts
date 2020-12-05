@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+.comment-title-parent{
+  margin-bottom: 10px;
+}
+
+.create-comment-title{
+  font-family: 'Audiowide', cursive;  
+}
+
+.review-title{
+  font-family: 'Audiowide', cursive;  
+}
+
+.comment-review-title-input{
+  border: 1px solid black;
+  box-shadow: 2px 3px black;
+  margin-left: 5px;
+}
+
+.comment-review-parent{
+  margin-bottom: 10px;
+}
+
+.create-comment-review{
+  font-family: 'Audiowide', cursive;
+}
+
+.comment-review-input{
+  border: 1px solid black;
+  box-shadow: 2px 3px black;
+  margin-left: 5px;
+}
+
+.comment-create-submit{
+  width: 130px;
+  border: 1px solid black;
+  color: white;
+  background-color: #7d7878;
+  box-shadow: 5px 5px #5c4d4d;
+}
